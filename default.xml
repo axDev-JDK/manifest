@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="axdev"
+           fetch="https://github.com/" />
+
+  <default revision="master"
+           remote="axdev"
+           sync-j="4"
+           sync-c="true" />
+
+  <project path="corba" name="axDev-JDK/corba" />
+  <project path="hotspot" name="axDev-JDK/hotspot" />
+  <project path="jaxp" name="axDev-JDK/jaxp" />
+  <project path="jaxws" name="axDev-JDK/jaxws" />
+  <project path="jdk" name="axDev-JDK/jdk" />
+  <project path="langtools" name="axDev-JDK/langtools" />
+  <project path="make" name="axDev-JDK/make" >
+    <copyfile src="scripts/root.mk" dest="Makefile" />
+  </project>
+</manifest>
