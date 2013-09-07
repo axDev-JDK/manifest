@@ -1,0 +1,35 @@
+axDev OpenJDK (a git-friendly OpenJDK mirror)
+====================================
+
+Documentation
+----------------------------
+The OpenJDK [README](http://hg.openjdk.java.net/jdk7u/jdk7u6/raw-file/tip/README-builds.html) contains all the information needed for building the OpenJDK using Mercurial.
+The following segments are relevant to setting up for this project in particular:
+- [Specific Developer Build Environments](http://hg.openjdk.java.net/jdk7u/jdk7u6/raw-file/tip/README-builds.html#SDBE)
+- [Build Dependencies](http://hg.openjdk.java.net/jdk7u/jdk7u6/raw-file/tip/README-builds.html#dependencies)
+
+
+**NOTE:**
+The following assumes you are using 64-bit Ubuntu (or similar). See "Documentation" for more info.
+
+Building the OpenJDK
+----------------------------
+Install OpenJDK6
+
+    $ sudo apt-get install openjdk-6-jdk
+
+Fetch the source code
+
+    $ mkdir -p jdk7u-dev && cd jdk7u-dev
+    $ repo init -u git://github.com/axDev-JDK/manifest.git -b master
+
+Once setup is complete, fetch projects by 'repo'
+
+    $ repo sync
+
+Configure and build OpenJDK
+
+    $ export LANG=C ALT_BOOTDIR=/usr/lib/jvm/java-6-openjdk-amd64
+    $ . jdk/make/jdk_generic_profile.sh
+    $ make
+
