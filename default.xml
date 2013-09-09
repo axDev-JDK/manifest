@@ -4,7 +4,7 @@
   <remote  name="axdev"
            fetch="https://github.com/" />
 
-  <default revision="master"
+  <default revision="icedtea-2.4"
            remote="axdev"
            sync-j="4"
            sync-c="true" />

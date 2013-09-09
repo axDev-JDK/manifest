@@ -21,7 +21,7 @@ Install OpenJDK6
 Fetch the source code
 
     $ mkdir -p jdk7u-dev && cd jdk7u-dev
-    $ repo init -u git://github.com/axDev-JDK/manifest.git -b master
+    $ repo init -u git://github.com/axDev-JDK/manifest.git -b icedtea-2.4
 
 Once setup is complete, fetch projects by 'repo'
 
