@@ -10,7 +10,7 @@ The following segments are relevant to setting up for this project in particular
 
 
 **NOTE:**
-The following assumes you are using 64-bit Ubuntu (or similar). See "Documentation" for more info.
+The following assumes 64-bit Ubuntu (or similar) is being used. See "Documentation" for more info.
 
 Building the OpenJDK
 ----------------------------
@@ -32,4 +32,18 @@ Configure and build OpenJDK
     $ export LANG=C ALT_BOOTDIR=/usr/lib/jvm/java-6-openjdk-amd64
     $ . jdk/make/jdk_generic_profile.sh
     $ make
+
+**NOTE:**
+The generic profile for icedtea uses the following system libraries by default
+
+    USE_SYSTEM_LCMS=true
+    SYSTEM_ZLIB=true
+    USE_SYSTEM_JPEG=true
+    USE_SYSTEM_PNG=true
+    USE_SYSTEM_GIF=true
+    USE_SYSTEM_FT2=true
+
+These values may be exported as false or the the appropriate library must be installed
+
+    lcms2 zlib libjpeg libpng giflib freetype2
 
